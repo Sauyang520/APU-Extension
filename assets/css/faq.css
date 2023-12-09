@@ -1,0 +1,68 @@
+* {
+  outline: none;
+}
+
+summary {
+  list-style: none;
+}
+
+.accordion {
+  width: 100%;
+  max-width: 900px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+}
+
+.accordion .accordion__title, .accordion .lab_accordion__title {
+  text-align: left;
+  font-size: 19px;
+  color: #c3c3c3;
+  font-family: Roboto, sans-serif;
+  cursor: pointer;
+  position: relative;
+  padding: 20px 30px 20px 10px;
+  line-height: 30px;
+  text-transform: none;
+  letter-spacing: 1px;
+}
+
+.accordion .accordion__title span, .accordion .lab_accordion__title span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  transform: translateY(-50%);
+}
+
+.accordion .accordion__title span:before, .accordion .accordion__title span:after, .accordion .lab_accordion__title span:before, .accordion .lab_accordion__title span:after {
+  content: "";
+  position: absolute;
+  background-color: #c3c3c3;
+  transition: transform 0.25s ease-out;
+}
+
+.accordion .accordion__title span:before, .accordion .lab_accordion__title span:before {
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  margin-left: -22px;
+}
+
+.accordion .accordion__title span:after, .accordion .lab_accordion__title span:after {
+  top: 50%;
+  left: -20px;
+  width: 100%;
+  height: 4px;
+  margin-top: -2px;
+}
+
+.accordion .accordion__content {
+  text-align: left;
+  padding: 10px;
+  color: #c3c3c3;
+}
+

@@ -1,0 +1,36 @@
+{
+  "name": "APU Extension",
+  "version": "1.0.0",
+  "description": "Extension to collect the result of strategy with parameter combinations",
+  "manifest_version": 3,
+  "author": "Sauyang",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "APU Extension"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.tradingview.com/chart/*"
+      ],
+      "js": [
+        "assets/js/getparameter.js",
+        "assets/js/csvinput.js",
+        "assets/js/test.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "scripting",
+    "storage",
+    "activeTab",
+    "tabs",
+    "downloads",
+    "webRequest",
+    "webNavigation"
+  ]
+}
